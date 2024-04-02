@@ -1,0 +1,44 @@
+ion-card{
+  box-shadow: none;
+}
+
+ion-label{
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.name-digimon{
+  font-weight: bold;
+  font-size: 17px;
+  border-bottom: 1px solid black;
+}
+
+.img-horizontal{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+ion-badge{
+  margin-inline: 5px;
+}
+
+.slider-container {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+}
+
+.slider {
+  display: inline-block;
+}
+
+.slide {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+

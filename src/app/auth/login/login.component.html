@@ -1,0 +1,43 @@
+<ion-content [fullscreen]="true" class="ion-padding" color="medium">
+  <div class="logo-app">
+    <ion-img src="https://digimon-api.com/logo.png"> </ion-img>
+  </div>
+  <ion-card class="ion-padding ion-margin card-center">
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <ion-item lines="none">
+        <ion-label>
+          <ion-text color="primary" class="title">{{'auth.login.login' | translate}}</ion-text>
+        </ion-label>
+      </ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+            <ion-input required type="email" inputmode="email" formControlName="email" label-placement="floating" fill="outline"
+              [label]="'labels.user.email' | translate" [placeholder]="'labels.user.enter_email' | translate"
+              [errorText]="'labels.user.invalid_email' | translate"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <ion-input required [type]="passwordTypeOne" formControlName="password" label-placement="floating"
+              fill="outline" [label]="'labels.user.password' | translate"
+              [placeholder]="'labels.user.enter_password' | translate"
+              [errorText]="'labels.user.invalid_password' | translate">
+              <ion-icon [name]="passwordTypeOne == 'password' ? 'eye':'eye-off-outline'" slot="end"
+                (click)="togglePasswordTypeOne()"></ion-icon>
+            </ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+        </ion-row>
+      </ion-grid>
+      <ion-button expand="block" type="submit" color="primary">{{'auth.login.login'| translate }}</ion-button>
+      <ion-item button lines="none" detail="true" (click)="navigationRegister()">
+        <ion-label class="ion-text-center">
+          {{ 'auth.login.not_have_account' | translate}}
+          <ion-text color="primary">{{ 'auth.sign_up.sign_up' | translate}}</ion-text>
+        </ion-label>
+      </ion-item>
+    </form>
+  </ion-card>
+</ion-content>

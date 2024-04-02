@@ -76,6 +76,14 @@
   --ion-color-light-tint: #f5f6f9;
 }
 
+
+.custom-modal::part(content){
+  --height: 80%;
+  position:absolute;
+  bottom: 0px;
+  --border-radius:5px;
+}
+
 @media (prefers-color-scheme: dark) {
   /*
    * Dark Colors
@@ -236,7 +244,7 @@
 }
 
 html {
-  /* 
+  /*
    * For more information on dynamic font scaling, visit the documentation:
    * https://ionicframework.com/docs/layout/dynamic-font-scaling
    */

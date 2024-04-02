@@ -1,0 +1,45 @@
+{
+  "auth":{
+    "login":{
+      "login":"Login",
+      "not_have_account":"¿No tienes una cuenta?"
+    },
+    "sign_up":{
+      "sign_up":"Registrate",
+      "register":"Registrar",
+      "enter":"Ingresa",
+      "have_account":"¿Ya tienes una cuenta?",
+      "information":"Información",
+      "information_email_verification":" Se ha enviado un correo de verificación para que pueda ingresar. Por favor, revise su bandeja de entrada y siga las instrucciones para completar el proceso de verificación."
+    },
+    "error":{
+      "unverified_email":"Email no verificado",
+      "invalid_credentials":"Credenciales inválidas",
+      "passwords_not_match":"Las contraseñas no coinciden",
+      "email_already_registered":"Email ya registrado"
+    }
+  },
+  "pages":{
+    "home":{
+      "home":"Home",
+      "close_session":"Cerrar Session"
+    }
+  },
+  "labels":{
+    "user":{
+      "name":"Nombre",
+      "enter_name":"Ingrese Nombre",
+      "invalid_name":"Nombre Inválido",
+      "email":"Email",
+      "enter_email":"Ingrese Email",
+      "invalid_email":"Email Inválido",
+      "password":"Contraseña",
+      "enter_password":"Ingrese ",
+      "invalid_password":"Contraseña Inválida",
+      "confirm_password":"Confirmar Contraseña"
+    }
+  },
+  "error":{
+    "global":"!Ups¡ Algo salío mal"
+  }
+}

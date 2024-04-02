@@ -1,0 +1,11 @@
+ion-card{
+  box-shadow: none;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  gap: 32px;
+
+}
+

@@ -1,17 +1,31 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './guards/auth.guard';
+import { NoAuthGuard } from './guards/no-auth.guard';
+import { AppRoutes } from './urls/app-routes';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: AppRoutes.pages,
     pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+    path: AppRoutes.pages,
+    loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: AppRoutes.auth,
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
+    canActivate: [NoAuthGuard]
+  },
+  {
+    path: '**',
+    redirectTo: AppRoutes.pages,
   }
 ];
+
 
 @NgModule({
   imports: [
@@ -19,4 +33,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

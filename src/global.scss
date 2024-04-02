@@ -24,3 +24,50 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+.logo-app {
+  display: flex;
+  justify-content: center;
+  ion-img{
+    width: 200px;
+    height: auto;
+  }
+}
+.title{
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.card-center{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+
+ion-card ion-img {
+  margin:0 auto ;
+}
+
+.img-big{
+  height: 200px;
+  width: 200px;
+}
+
+.img-medium{
+  height: 150px;
+  width: 150px;
+}
+
+.text-detail{
+  height: 95px;
+}
+
+ion-input ion-icon{
+  font-size: 25px;
+}

@@ -1,0 +1,10 @@
+
+<ion-card *ngIf="digimonItem" (click)="searchPokemonById(digimonItem.id)">
+  <ion-img [src]="digimonItem.image" (ionError)="digimonItem.image = assets.imageNotFound" class="img-medium"></ion-img>
+  <div class="ion-padding ion-text-center text-detail">
+    <ion-label>
+      <h5 color="medium">#{{digimonItem.id}}</h5>
+      <p><ion-text color="primary">{{digimonItem.name}}</ion-text></p>
+    </ion-label>
+  </div>
+</ion-card>
